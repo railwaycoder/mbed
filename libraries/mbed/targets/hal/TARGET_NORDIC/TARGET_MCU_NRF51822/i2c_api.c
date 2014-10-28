@@ -19,13 +19,13 @@
 #include "pinmap.h"
 
 static const PinMap PinMap_I2C_SDA[] = {
-    {p22, I2C_0, 1},
+    {p10, I2C_0, 1},
     {p13, I2C_1, 2},
     {NC, NC, 0}
 };
 
 static const PinMap PinMap_I2C_SCL[] = {
-    {p20, I2C_0, 1},
+    {p8, I2C_0, 1},
     {p15, I2C_1, 2},
     {NC, NC,    0}
 };
