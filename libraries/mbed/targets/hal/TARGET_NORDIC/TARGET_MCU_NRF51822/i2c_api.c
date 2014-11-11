@@ -19,25 +19,11 @@
 #include "pinmap.h"
 #include "mbed_error.h"
 
-<<<<<<< HEAD
-static const PinMap PinMap_I2C_SDA[] = {
-    {p28, I2C_0, 1},
-    {p13, I2C_1, 2},
-    {NC, NC, 0}
-};
-
-static const PinMap PinMap_I2C_SCL[] = {
-    {p29, I2C_0, 1},
-    {p15, I2C_1, 2},
-    {NC, NC,    0}
-};
-=======
 // nRF51822's I2C_0 and SPI_0 (I2C_1, SPI_1 and SPIS1) share the same address.
 // They can't be used at the same time. So we use two global variable to track the usage.
 // See nRF51822 address information at nRF51822_PS v2.0.pdf - Table 15 Peripheral instance reference
 volatile i2c_spi_peripheral_t i2c0_spi0_peripheral = {0, 0, 0, 0};
 volatile i2c_spi_peripheral_t i2c1_spi1_peripheral = {0, 0, 0, 0};
->>>>>>> upstream/master
 
 void i2c_interface_enable(i2c_t *obj)
 {
